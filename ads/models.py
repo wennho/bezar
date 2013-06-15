@@ -1,8 +1,16 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Ad(models.Model):
+    title = models.CharField(max_length=140)
     create_date    = models.DateField()
+    price = models.DecimalField(max_digits=7, decimal_places = 2)
+    location = models.CharField(max_length=140)    
     owner = models.ForeignKey(User)
-    text = models.TextField()
+    description = models.TextField()
+    
+    def __unicode__(self):
+        return self.title
+    
     

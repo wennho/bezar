@@ -1,0 +1,22 @@
+{% if latest_ad_list %}
+
+    <table>
+    <tr>
+    <td>Title</td>
+    <td>Price</td>
+    <td>Location</td>
+    <td>Date Created</td>
+    </tr>
+
+    {% for ad in latest_ad_list %}
+        <tr>
+            <td><a href="/ads/{{ ad.id }}/">{{ ad.title }}</a></td>
+            <td>${{ ad.price }}</td>
+            <td>{{ ad.location }}</td>
+            <td>{{ ad.create_date }}</td>
+        </tr>        
+    {% endfor %}
+    </table>
+{% else %}
+    <p>No ads are available.</p>
+{% endif %}
