@@ -1,7 +1,8 @@
 * Create an ad system
-    - Create ads
+    - Create ads [done]
         - Add images (up to 5)        
         - Edit ads        
+        - allow users to modify ad creation date-time? or just automatically set it?
     - Link ads to users. Only users can edit their respective ads
     - Search for ads
     - Price comparison (amazon, ebay, etc)

@@ -2,7 +2,7 @@
 
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
-<p>${{ ad.price }} - {{ ad.owner }} - {{ ad.location }} - {{ ad.create_date }}</p>
+<p>${{ ad.price }} - {{ ad.owner }} - {{ ad.location }} - {{ ad.create_datetime.date }}</p>
 <p>{{ ad.description }} </p>
 
 

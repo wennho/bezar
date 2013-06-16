@@ -11,10 +11,16 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
         """Return the last 20 published ads."""
-        return Ad.objects.order_by('-create_date')[:20]
+        return Ad.objects.order_by('-create_datetime')[:20]
 
 
 class DetailView(generic.DetailView):
     model = Ad
     template_name = 'ads/detail.html'
 
+class CreateView(generic.CreateView):
+    model = Ad        
+    template_name = 'ads/create.html'    
+    def get_success_url(self):
+        return reverse('ads:index')
+    

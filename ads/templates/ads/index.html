@@ -10,10 +10,10 @@
 
     {% for ad in latest_ad_list %}
         <tr>
-            <td><a href="/ads/{{ ad.id }}/">{{ ad.title }}</a></td>
+            <td><a href="{% url 'ads:detail' ad.id %}">{{ ad.title }}</a></td>
             <td>${{ ad.price }}</td>
             <td>{{ ad.location }}</td>
-            <td>{{ ad.create_date }}</td>
+            <td>{{ ad.create_datetime.date }}</td>
         </tr>        
     {% endfor %}
     </table>
