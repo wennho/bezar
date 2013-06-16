@@ -1,7 +1,8 @@
 * Create an ad system
-    - Create ads [done]
+    - Create ads 
+        - Create basic ads (ads/create) [done] 
         - Add images (up to 5)        
-        - Edit ads        
+        - Edit & delete ads [done]        
         - allow users to modify ad creation date-time? or just automatically set it?
     - Link ads to users. Only users can edit their respective ads
     - Search for ads

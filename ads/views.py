@@ -21,6 +21,20 @@ class DetailView(generic.DetailView):
 class CreateView(generic.CreateView):
     model = Ad        
     template_name = 'ads/create.html'    
+    # Always return an HttpResponseRedirect after successfully dealing
+    # with POST data. This prevents data from being posted twice if a
+    # user hits the Back button.    
+    def get_success_url(self):
+        return reverse('ads:detail', kwargs={'pk':self.object.id})
+
+class UpdateView(generic.UpdateView):
+    model = Ad        
+    template_name = 'ads/update.html'    
+    def get_success_url(self):
+        return reverse('ads:detail', kwargs={'pk':self.object.id})
+
+class DeleteView(generic.DeleteView):
+    model = Ad
+    template_name = 'ads/delete.html'  
     def get_success_url(self):
         return reverse('ads:index')
-    
