@@ -1,8 +1,8 @@
 * Create an ad system
     - Create ads 
-        - Create basic ads (ads/create) [done] 
+        - [done] Create basic ads (ads/create)  
         - Add images (up to 5)        
-        - Edit & delete ads [done]        
+        - [done] Edit & delete ads         
         - allow users to modify ad creation date-time? or just automatically set it?
     - Link ads to users. Only users can edit their respective ads
     - Search for ads
@@ -10,6 +10,10 @@
     - Ad tagging system
 
 * Create a user system
+    - User registration
+    - User activation
+        - Send activation email
+        - Activation confirmation
     - Users access their respective ads
     - Users have a message inbox
     - Users message other users
