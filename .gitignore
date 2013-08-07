@@ -1,0 +1,4 @@
+*.pyc
+.project
+.pydevproject
+django-registration-1.0
