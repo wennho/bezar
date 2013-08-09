@@ -10,14 +10,14 @@
     - Ad tagging system
 
 * Create a user system
-    - User registration
-    - User activation
+    - [done] User registration 
+    - [done] User activation
         - Send activation email
         - Activation confirmation
     - Users access their respective ads
     - Users have a message inbox
     - Users message other users
-    - Usernames cannot be email addresses
+    - Usernames cannot be email addresses OR login with email but display username
     
 * Refine process flow    
     - Ads expire after 30 days, unless reactivated
