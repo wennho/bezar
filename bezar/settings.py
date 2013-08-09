@@ -1,4 +1,6 @@
 # Django settings for bezar project.
+from django.core.urlresolvers import reverse
+
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -160,4 +162,6 @@ LOGGING = {
         },
     }
 }
+
+LOGIN_REDIRECT_URL = reverse('ads:index')
 
