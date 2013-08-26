@@ -1,18 +1,4 @@
-/* Website template by freewebsitetemplates.com */
-@font-face {
-	font-family: 'Abel-Regular';
-	src: url('../fonts/Abel-Regular.eot');
-	src: local('☺'), url('../fonts/Abel-Regular.woff') format('woff'), url('../fonts/Abel-Regular.ttf') format('truetype'), url('../fonts/Abel-Regular.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Cabin-Regular';
-	src: url('../fonts/Cabin-Regular.eot');
-	src: local('☺'), url('../fonts/Cabin-Regular.woff') format('woff'), url('../fonts/Cabin-Regular.ttf') format('truetype'), url('../fonts/Cabin-Regular.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
+
 body {
 	background: url(../images/bg-body.png) repeat left top;
 	min-width: 960px;
@@ -115,8 +101,10 @@ img {
 }
 /*------------------------------ CONTENTS ------------------------------*/
 #contents {
-	min-height: 400px;
+	min-height: 600px;
 	padding-top: 45px;
+	color: #000;
+	font: 0.8em/1.6em Arial, Helvetica, sans-serif;
 }
 #contents div.area:after {
 	clear:both;
@@ -143,10 +131,7 @@ h3 {
 	text-transform: none;
 }
 p {
-	color: #000;
-	font: 12px/24px Arial, Helvetica, sans-serif;
-	padding: 0 0 24px;
-	margin: 0;
+
 }
 p a {
 	color: #9b8d84;

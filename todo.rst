@@ -28,7 +28,7 @@
         - Subsequent posts are also verified via email. However, editing posts requires logging in to account
         
 * Implement Template & CSS for site
-    - Implement template inheritance and update current pages
+    - [done] Implement template inheritance and update current pages
     - Clear extra CSS, html & images
 
 * Other sources of data (either API or scrape)
