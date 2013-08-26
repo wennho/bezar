@@ -1,9 +1,15 @@
+{% extends "ads/base_ads.html" %}
+
+{% block listings %}<li class="selected"><a href="{% url 'ads:index' %}">Listings</a></li>{% endblock %}
+
+{% block content %}
 
 <form action="" method="get">
 	<input type="text" name="q"> <input type="submit"
 		value="Search">
 </form>
 
+<p />
 
 {% if search %}
 <p>Searched for <i>{{ search }}</i></p>
@@ -32,3 +38,4 @@
 <p>No ads are available.</p>
 {% endif %}
 
+{% endblock %}

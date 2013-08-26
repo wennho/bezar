@@ -1,0 +1,15 @@
+{% extends "bezar/base.html" %}
+
+{% load staticfiles %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css" />
+{% endblock %}
+
+{% block logo %}
+<a href="{% url 'ads:index' %}"><img src="{% static 'images/logo.png' %}" alt="LOGO" height="86" width="170" />
+{% endblock %}
+
+{% block listings %}<li><a href="{% url 'ads:index' %}">Listings</a></li>{% endblock %}
+{% block post_ad %}<li><a href="{% url 'ads:create' %}">Post Ad</a></li>{% endblock %}
+{% block account %}<li><a href="{% url 'accounts:registration_register' %}">Account</a></li>{% endblock %}

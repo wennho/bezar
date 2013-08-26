@@ -1,4 +1,10 @@
+{% extends "ads/base_ads.html" %}
+
+{% block post_ad %}<li class="selected"><a href="{% url 'ads:create' %}">Post Ad</a></li>{% endblock %}
+
+{% block content %}
 <form action="" method="post">{% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Create" />
 </form>
+{% endblock %}

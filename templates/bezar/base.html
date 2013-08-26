@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>{% block title %}Logistics Website Template{% endblock %}</title>
+{% block css %}
+<link rel="stylesheet" href="css/styles.css" type="text/css" />
+{% endblock %}
+</head>
+<body>
+	<div id="header">
+		<div class="area">
+			<div id="logo">
+				{% block logo %}<a href="index.html"><img src="images/logo.png"
+					alt="LOGO" height="86" width="170" />{% endblock %}</a>
+			</div>
+			<ul id="navigation">
+				{% block listings %}<li class="selected"><a href="index.html">Listings</a></li>{% endblock %}
+				{% block post_ad %}<li><a href="create.html">Post Ad</a></li>{% endblock %}
+				{% block account %}<li><a href="blog.html">Account</a></li>{% endblock %}
+			</ul>
+		</div>
+	</div>
+	<div id="contents">
+
+		<div class="area">
+
+			{% block content %}
+
+			<h2>Test Sample</h2>
+			<p>
+				This website template has been designed by <a
+					href="http://www.freewebsitetemplates.com/">Free Website
+					Templates</a> for you, for free. You can replace all this text with
+				your own text. You can remove any link to our website from this
+				website template, you're free to use this website template without
+				linking back to us. If you're having problems editing this website
+				template, then don't hesitate to ask for help on the <a
+					href="http://www.freewebsitetemplates.com/forums/">Forum</a>.
+			</p>
+			{% endblock %}
+		</div>
+	</div>
+	<div id="footer">
+		<span class="divider"></span>
+		<div class="area">
+			<p align="center">© 2013 Bezar. All Rights Reserved.</p>
+		</div>
+	</div>
+</body>
+</html>

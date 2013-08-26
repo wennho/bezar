@@ -5,7 +5,8 @@
         - [done] Edit & delete ads         
         - allow users to modify ad creation date-time? or just automatically set it?
     - Link ads to users. Only users can edit their respective ads
-    - [done] Search for ads
+    - Search for ads
+        - [done] Search by title
         - Price filter
     - Price comparison (amazon, ebay, etc)
     - Ad tagging system
@@ -13,8 +14,8 @@
 * Create a user system
     - [done] User registration 
     - [done] User activation
-        - Send activation email
-        - Activation confirmation
+        - [done] Send activation email
+        - [done] Activation confirmation
     - Users access their respective ads
     - Users have a message inbox
     - Users message other users
@@ -26,4 +27,13 @@
         - First post is just verified via email. User account is automatically created. 
         - Subsequent posts are also verified via email. However, editing posts requires logging in to account
         
-* Implement CSS for site
+* Implement Template & CSS for site
+    - Implement template inheritance and update current pages
+    - Clear extra CSS, html & images
+
+* Other sources of data (either API or scrape)
+	- Amazon
+	- Craigslist
+	- Ebay
+
+* Test deployment to server (remember to set static file directory)
