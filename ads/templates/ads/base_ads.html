@@ -1,3 +1,5 @@
 {% extends "bezar/base_django.html" %}
 
 {% block title %} Listings {% endblock %}
+
+{% block listings %}<li class="selected"><a href="{% url 'ads:index' %}">Listings</a></li>{% endblock %}

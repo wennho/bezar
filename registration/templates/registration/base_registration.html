@@ -6,29 +6,27 @@
 
 {% block content %}
 
-    <div id="header">
-        {% block header %}
-	<a href="{% url 'ads:index' %}">Home</a> | 
+
+
 
 	{% if user.is_authenticated %}
 	Logged in: {{ user.username }} 
-	(<a href="{% url 'auth_logout' %}"> "Log out"</a> | 
-	<a href="{% url 'auth_password_change' %}"> "Change password"</a>)
+	( <a href="{% url 'accounts:auth_logout' %}">Log out</a> | 
+	<a href="{% url 'accounts:auth_password_change' %}">Change password</a>)
 	{% else %}
-	<a href="{% url 'auth_login' %}"> "Log in"y</a>
+	<a href="{% url 'accounts:auth_login' %}"> Log in</a>
 	{% endif %}
-	<hr />
-        {% endblock %}
-    </div>
 
-    <div id="content">
+
+	<p/>  
+
+
+
+    <div id="registration_content">
         {% block registration_content %}{% endblock %}
     </div>
 
-    <div id="footer">
-        {% block footer %}
-        <hr />
-        {% endblock %}
-    </div>
+
+
 
 {% endblock %}

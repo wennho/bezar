@@ -1,5 +1,7 @@
 {% extends "ads/base_ads.html" %}
 
+<!-- Switch selected tab to Post Ad -->
+{% block listings %}<li><a href="{% url 'ads:index' %}">Listings</a></li>{% endblock %}
 {% block post_ad %}<li class="selected"><a href="{% url 'ads:create' %}">Post Ad</a></li>{% endblock %}
 
 {% block content %}
