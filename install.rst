@@ -1,5 +1,9 @@
 Installation steps
+----------------
 - Install Django 
-  - pip install django
+  
+``pip install django``
+    
 - Install Scrapy
-  - pip install scrapy
+  
+``pip install scrapy``
