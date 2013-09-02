@@ -34,9 +34,9 @@ To-do List
     - [done] Implement template inheritance and update current pages
     - Clear extra CSS, html & images
 
-* Other sources of data (scrape) [not using APIs because they are fickle, tie us in to the company's style, and can be throttled]
+* Other sources of data (scrape) [not using APIs because we become dependent on the company, and it's not generalizable to other sites. Also, speed is not guaranteed]
 	- [done] Get Scrapy framework running on craigslist
 	- Run Scrapy spider from a Django view call, and display returned items
 	- cover Amazon, Craigslist, Ebay
 
-* Test deployment to server (remember to set static file directory)
+* Test deployment to server
