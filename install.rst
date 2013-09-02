@@ -7,3 +7,5 @@ Installation steps
 - Install Scrapy
   
 ``pip install scrapy``
+
+- In *bezar/bezar/settings.py*, add the installation location to TEMPLATE_DIRS and STATICFILES_DIRS 
