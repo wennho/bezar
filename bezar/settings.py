@@ -75,6 +75,7 @@ STATICFILES_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     'C:/xampp/python/bezar/templates/bezar',
+    '/home/wenhao/bezar/templates/bezar',
 )
 
 # List of finder classes that know how to find static files in
@@ -115,6 +116,7 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     'C:/xampp/python/bezar/templates',
+    '/home/wenhao/bezar/templates',
 )
 
 INSTALLED_APPS = (
