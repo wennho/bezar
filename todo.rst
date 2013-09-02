@@ -31,9 +31,9 @@
     - [done] Implement template inheritance and update current pages
     - Clear extra CSS, html & images
 
-* Other sources of data (either API or scrape)
-	- Amazon
-	- Craigslist
-	- Ebay
+* Other sources of data (scrape) [not using APIs because they are fickle, tie us in to the company's style, and can be throttled]
+	- [done] Get Scrapy framework running on craigslist
+	- Run Scrapy spider from a Django view call, and display returned items
+	- cover Amazon, Craigslist, Ebay
 
 * Test deployment to server (remember to set static file directory)
