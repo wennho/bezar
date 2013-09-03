@@ -19,23 +19,28 @@ class CraigsView( generic.ListView ):
         return context
 
     def get_queryset( self ):
-        return crawler.crawl()
+        if 'q' in self.request.GET:
+            return crawler.crawl( self.request.GET['q'] )
+        else:
+            return crawler.crawl()
 
 class CrawlerScript():
     def __init__( self ):
         self.crawler = CrawlerProcess( Settings() )
         self.crawler.install()
         self.crawler.configure()
-    def _crawl( self, queue ):
+    def _crawl( self, queue, search ):
         log.start( loglevel = log.DEBUG )
         current_spider = CraigslistSpider()
+        if search:
+            current_spider.set_search_url( search )
         self.crawler.crawl( current_spider )
         self.crawler.start()
         self.crawler.stop()
         queue.put( current_spider.get_object_list() )
-    def crawl( self ):
+    def crawl( self, search = "" ):
         q = Queue()
-        p = Process( target = self._crawl, args = ( q, ) )
+        p = Process( target = self._crawl, args = ( q, search ) )
         p.start()
         p.join()
         return q.get()

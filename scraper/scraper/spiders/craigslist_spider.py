@@ -15,6 +15,11 @@ class CraigslistSpider( BaseSpider ):
         "http://seattle.craigslist.org",
     ]
 
+    def set_search_url( self, search ):
+        self.start_urls = [
+            "http://seattle.craigslist.org/search/?sort=rel&areaID=2&catAbb=sss&query=" + search,
+        ]
+
     def get_object_list( self ):
         return self.django_list
 

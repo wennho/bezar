@@ -37,7 +37,7 @@ To-do List
 * Other sources of data (scrape) [not using APIs because we become dependent on the company, and it's not generalizable to other sites. Also, speed is not guaranteed]
 	- [done] Get Scrapy framework running on craigslist
 	- [done] Run Scrapy spider from a Django view call, and display returned items
-	- Cover craigslist, with search 
+	- [done] Cover craigslist, with search
 	- cover Amazon, Ebay
 
 * Test deployment to server
