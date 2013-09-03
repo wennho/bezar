@@ -2,7 +2,8 @@
 Installation steps
 ----------------
 
-- Install MySQL ``sudo apt-get mysql-server``
+- Install MySQL 
+	- ``sudo apt-get mysql-server``
 	- Create a database called *bezar*, with a blank password.
 
 - Install Django ``pip install django``
