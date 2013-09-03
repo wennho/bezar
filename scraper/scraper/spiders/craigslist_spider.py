@@ -1,6 +1,6 @@
 from scrapy.spider import BaseSpider
 from scrapy.selector import HtmlXPathSelector
-from scraper.items import ScraperItem
+from ..items import ScraperItem
 
 class CraigslistSpider(BaseSpider):
     name = "craigs"
@@ -8,6 +8,10 @@ class CraigslistSpider(BaseSpider):
     start_urls = [
         "http://seattle.craigslist.org/sss/",
     ]
+    django_list = []
+
+    def get_object_list(self):
+        return self.django_list
 
     def parse(self, response):
         hxs = HtmlXPathSelector(response)
@@ -16,9 +20,10 @@ class CraigslistSpider(BaseSpider):
         for row in rows:
             item = ScraperItem()
             item['title'] = row.select('.//a[not(@class)]/text()').extract()
-            item['create_datetime']  = row.select('.//span[@class="date"]/text()').extract()
+            item['create_datetime'] = row.select('.//span[@class="date"]/text()').extract()
             item['price'] = row.select('.//span[@class="price"]/text()').extract()
             item['location'] = row.select('.//span[@class="pnr"]/small/text()').extract()
             item['url'] = row.select('.//a[not(@class)]/@href').extract()
+            self.django_list.append(item.save(commit=False))
             items.append(item)
         return items
