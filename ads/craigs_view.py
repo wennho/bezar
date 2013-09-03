@@ -18,7 +18,6 @@ class CraigsView( generic.ListView ):
             context['search'] = self.request.GET['q']
         return context
 
-
     def get_queryset( self ):
         return crawler.crawl()
 

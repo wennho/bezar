@@ -7,8 +7,16 @@ from scrapy.item import Item, Field
 from scrapy.contrib.djangoitem import DjangoItem
 from ads.models import ScrapedAd
 
-class ScraperItem(DjangoItem):
-    # define the fields for your item here like:
-    # name = Field()
+# Need to extract the string from the list returned
+def delist( selector_list ):
+    if selector_list:
+        return selector_list[0]
+    else:
+        return ''
+
+class ScraperItem( DjangoItem ):
+
     django_model = ScrapedAd
-    
+
+    def __setitem__( self, key, value ):
+        super( ScraperItem, self ).__setitem__( key, delist( value ) )

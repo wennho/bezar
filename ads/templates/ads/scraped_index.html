@@ -27,10 +27,10 @@
 
 	{% for ad in scraped_ad_list %}
 	<tr>
-		<td><a href="{{ ad.url }}">{{ ad.title }}</a></td>
-		<td>${{ ad.price }}</td>
+		<td><a href="{{ ad.domain }}{{ ad.url }}">{{ ad.title }}</a></td>
+		<td>{{ ad.price }}</td>
 		<td>{{ ad.location }}</td>
-		<td>{{ ad.create_datetime.date }}</td>
+		<td>{{ ad.create_datetime }}</td>
 	</tr>
 	{% endfor %}
 </table>
